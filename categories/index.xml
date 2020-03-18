@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Tech Hogwarts School</title>
+    <title>Categories on He&#39;s Tech</title>
     <link>https://carlhejiayu.github.io/categories/</link>
-    <description>Recent content in Categories on Tech Hogwarts School</description>
+    <description>Recent content in Categories on He&#39;s Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
-    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <managingEditor>carlhejiayu@gmail.com (Jiayu Carl He)</managingEditor>
+    <webMaster>carlhejiayu@gmail.com (Jiayu Carl He)</webMaster>
     
 	<atom:link href="https://carlhejiayu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     

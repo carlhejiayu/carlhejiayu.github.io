@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on He&#39;s Tech</title>
+    <link>https://carlhejiayu.github.io/post/</link>
+    <description>Recent content in Posts on He&#39;s Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>carlhejiayu@gmail.com (Jiayu Carl He)</managingEditor>
+    <webMaster>carlhejiayu@gmail.com (Jiayu Carl He)</webMaster>
+    <lastBuildDate>Wed, 18 Mar 2020 13:45:40 -0400</lastBuildDate>
+    
+	<atom:link href="https://carlhejiayu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Post</title>
+      <link>https://carlhejiayu.github.io/post/2020-03-18-first-post/</link>
+      <pubDate>Wed, 18 Mar 2020 13:45:40 -0400</pubDate>
+      <author>carlhejiayu@gmail.com (Jiayu Carl He)</author>
+      <guid>https://carlhejiayu.github.io/post/2020-03-18-first-post/</guid>
+      <description>This is my first post, how exciting!</description>
+    </item>
+    
+  </channel>
+</rss>
