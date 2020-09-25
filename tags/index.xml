@@ -39,23 +39,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>example</title>
-      <link>https://carlhejiayu.github.io/tags/example/</link>
-      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
-      <author>carlhejiayu@gmail.com (Jiayu Carl He)</author>
-      <guid>https://carlhejiayu.github.io/tags/example/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>markdown</title>
-      <link>https://carlhejiayu.github.io/tags/markdown/</link>
-      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
-      <author>carlhejiayu@gmail.com (Jiayu Carl He)</author>
-      <guid>https://carlhejiayu.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
