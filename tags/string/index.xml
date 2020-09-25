@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>string on He&#39;s Tech</title>
+    <link>https://carlhejiayu.github.io/tags/string/</link>
+    <description>Recent content in string on He&#39;s Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>carlhejiayu@gmail.com (Jiayu Carl He)</managingEditor>
+    <webMaster>carlhejiayu@gmail.com (Jiayu Carl He)</webMaster>
+    <lastBuildDate>Thu, 24 Sep 2020 10:09:05 -0400</lastBuildDate>
+    
+	<atom:link href="https://carlhejiayu.github.io/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Leetcode.616 Add Bold Tag in String</title>
+      <link>https://carlhejiayu.github.io/post/2020-09-24-leetcode616/</link>
+      <pubDate>Thu, 24 Sep 2020 10:09:05 -0400</pubDate>
+      <author>carlhejiayu@gmail.com (Jiayu Carl He)</author>
+      <guid>https://carlhejiayu.github.io/post/2020-09-24-leetcode616/</guid>
+      <description>This description/problem statement could be found here. This question can be disected by three parts.In the following, I am going to dicuss in details with code on how to proceed in each part.
+The working solution is defined as followed
+class Solution: def addBoldTag(self, s: str, dict: List[str]) -&amp;gt; str: #STEP1 intervals = [] for word in dict: start = 0 wordLength = len(word) startIndex = s.find(word, start) while startIndex !</description>
+    </item>
+    
+  </channel>
+</rss>

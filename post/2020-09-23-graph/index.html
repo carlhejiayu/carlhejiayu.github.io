@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Overview of all pages with tags, ordered by tag - He&#39;s Tech</title>
-  <meta name="description" content="A full overview of all pages with tags, ordered by tag, such as: leetcode, algorithm, example, markdown, and string">
+  <title>Graph Problems Identification - He&#39;s Tech</title>
+  <meta name="description" content="Graph is a very common algorithm problem that you encounter in the coding interviews. However, this articile is not explaining the basic of graph theory. Instead, this article mainly disucssed about when the problem should be sovled by graph theories. Of course, some problems are very obvious that you were given a tree or graph to work on. But sometimes, it&rsquo;s not trival to identify whether the problem belong to graph.">
   <meta name="author" content="Jiayu Carl He"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -29,14 +29,64 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/carlhejiayu.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/carlhejiayu.github.io\/post\/2020-09-23-graph\/",
+          "name": "Graph problems identification"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Jiayu Carl He"
+  },
+  "headline": "Graph Problems Identification",
+  "description" : "Graph is a very common algorithm problem that you encounter in the coding interviews. However, this articile is not explaining the basic of graph theory. Instead, this article mainly disucssed about when the problem should be sovled by graph theories. Of course, some problems are very obvious that you were given a tree or graph to work on. But sometimes, it\x26rsquo;s not trival to identify whether the problem belong to graph.",
+  "inLanguage" : "en",
+  "wordCount":  193 ,
+  "datePublished" : "2020-09-23T15:05:36",
+  "dateModified" : "2020-09-23T15:05:36",
+  "image" : "https:\/\/carlhejiayu.github.io\/img\/fish.png",
+  "keywords" : [ "algorithm, leetcode" ],
+  "mainEntityOfPage" : "https:\/\/carlhejiayu.github.io\/post\/2020-09-23-graph\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/carlhejiayu.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/carlhejiayu.github.io\/img\/fish.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="Tags" />
+<meta property="og:title" content="Graph Problems Identification" />
+<meta property="og:description" content="Graph is a very common algorithm problem that you encounter in the coding interviews. However, this articile is not explaining the basic of graph theory. Instead, this article mainly disucssed about when the problem should be sovled by graph theories. Of course, some problems are very obvious that you were given a tree or graph to work on. But sometimes, it&rsquo;s not trival to identify whether the problem belong to graph.">
 <meta property="og:image" content="https://carlhejiayu.github.io/img/fish.png" />
-<meta property="og:url" content="https://carlhejiayu.github.io/tags/" />
+<meta property="og:url" content="https://carlhejiayu.github.io/post/2020-09-23-graph/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="He&#39;s Tech" />
 
-  <meta name="twitter:title" content="Tags" />
+  <meta name="twitter:title" content="Graph Problems Identification" />
+  <meta name="twitter:description" content="Graph is a very common algorithm problem that you encounter in the coding interviews. However, this articile is not explaining the basic of graph theory. Instead, this article mainly disucssed about …">
   <meta name="twitter:image" content="https://carlhejiayu.github.io/img/fish.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://carlhejiayu.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -174,14 +224,33 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="tags-heading">
+            <div class="post-heading">
               
-                <h1>Tags</h1>
-              
-              
-                <hr class="small">
+                <h1>Graph Problems Identification</h1>
               
               
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 23, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;193&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Jiayu Carl He
+    
+  
+  
+</span>
+
+
               
             </div>
           </div>
@@ -192,132 +261,69 @@
 
 
     
-
-
-
 <div class="container" role="main">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
-    <article class="post-preview">
-      <div class="panel-group" id="accordion">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Graph is a very common algorithm problem that you encounter in the coding interviews. However, this articile is not explaining the basic of graph theory. Instead, this article mainly disucssed about when the problem should be sovled by graph theories. Of course, some problems are very obvious that you were given a tree or graph to work on. But sometimes, it&rsquo;s not trival to identify whether the problem belong to graph. Therefore,  I will explain in details and use some classic problems to demonstrate my points in the following.</p>
+<p>Firstly, if you were given an input of a matrix, there is a very high chance that you want to apply graph theory(dfs or bfs) to solve. Some of the classic problem are in LeetCode, e.g. <a href="https://leetcode.com/problems/flood-fill/">Flood Fill</a>, or <a href="https://leetcode.com/problems/number-of-islands/">Number of Islands</a>, or <a href="https://leetcode.com/problems/longest-increasing-path-in-a-matrix/">Longest Path in a Matrix</a>.</p>
+<p>Secondly, if you were given an input of a list of edge-like items (e.g [A,B] and A is source and B is destination) then you are required to build a graph using a hashtable and then apply graph theory to solve the corresponding problems. The examples for this are, <a href="https://leetcode.com/problems/reconstruct-itinerary/">Reconstruct Itinerary</a>, <a href="https://leetcode.com/problems/evaluate-division/">Evaluate Division</a>, or <a href="https://leetcode.com/problems/alien-dictionary/">Alien Dicitionary</a>.</p>
+
+
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseleetcode" data-parent="#accordion">
-                <div class="panel-heading" id="headerleetcode">
-                  <h4 class="panel-title">
-                      leetcode
-                    <span class="badge">2</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapseleetcode" class="panel-collapse collapse">
-              <div class="panel-body">
-                <a href="https://carlhejiayu.github.io/tags/leetcode/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="https://carlhejiayu.github.io/post/2020-09-24-leetcode616/" class="list-group-item">Leetcode.616 Add Bold Tag in String</a>
-                  
-                    <a href="https://carlhejiayu.github.io/post/2020-09-23-graph/" class="list-group-item">Graph Problems Identification</a>
-                  
-                </div>
-              </div>
-            </div>
+          <div class="blog-tags">
+            
+              <a href="https://carlhejiayu.github.io/tags/algorithm/">algorithm</a>&nbsp;
+            
+              <a href="https://carlhejiayu.github.io/tags/leetcode/">leetcode</a>&nbsp;
+            
           </div>
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsealgorithm" data-parent="#accordion">
-                <div class="panel-heading" id="headeralgorithm">
-                  <h4 class="panel-title">
-                      algorithm
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsealgorithm" class="panel-collapse collapse">
-              <div class="panel-body">
-                <a href="https://carlhejiayu.github.io/tags/algorithm/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="https://carlhejiayu.github.io/post/2020-09-23-graph/" class="list-group-item">Graph Problems Identification</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseexample" data-parent="#accordion">
-                <div class="panel-heading" id="headerexample">
-                  <h4 class="panel-title">
-                      example
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapseexample" class="panel-collapse collapse">
-              <div class="panel-body">
-                <a href="https://carlhejiayu.github.io/tags/example/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="https://carlhejiayu.github.io/post/2020-03-18-first-post/" class="list-group-item">First Post</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsemarkdown" data-parent="#accordion">
-                <div class="panel-heading" id="headermarkdown">
-                  <h4 class="panel-title">
-                      markdown
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsemarkdown" class="panel-collapse collapse">
-              <div class="panel-body">
-                <a href="https://carlhejiayu.github.io/tags/markdown/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="https://carlhejiayu.github.io/post/2020-03-18-first-post/" class="list-group-item">First Post</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-09-24-leetcode616/">Leetcode.616 Add Bold Tag in String</a></li>
+                
+              </ul>
+
+          
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsestring" data-parent="#accordion">
-                <div class="panel-heading" id="headerstring">
-                  <h4 class="panel-title">
-                      string
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsestring" class="panel-collapse collapse">
-              <div class="panel-body">
-                <a href="https://carlhejiayu.github.io/tags/string/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="https://carlhejiayu.github.io/post/2020-09-24-leetcode616/" class="list-group-item">Leetcode.616 Add Bold Tag in String</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://carlhejiayu.github.io/post/2020-03-18-first-post/" data-toggle="tooltip" data-placement="top" title="First Post">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://carlhejiayu.github.io/post/2020-09-24-leetcode616/" data-toggle="tooltip" data-placement="top" title="Leetcode.616 Add Bold Tag in String">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
         
-      </div>
-    </article>
+        
+      
+
+    </div>
   </div>
 </div>
-
-
 
       
 <footer>
@@ -352,7 +358,7 @@
               </li>
           
           <li>
-            <a href="/tags/index.xml" title="RSS">
+            <a href="" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

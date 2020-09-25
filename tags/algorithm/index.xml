@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithm on He&#39;s Tech</title>
+    <link>https://carlhejiayu.github.io/tags/algorithm/</link>
+    <description>Recent content in algorithm on He&#39;s Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>carlhejiayu@gmail.com (Jiayu Carl He)</managingEditor>
+    <webMaster>carlhejiayu@gmail.com (Jiayu Carl He)</webMaster>
+    <lastBuildDate>Wed, 23 Sep 2020 15:05:36 -0400</lastBuildDate>
+    
+	<atom:link href="https://carlhejiayu.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Graph Problems Identification</title>
+      <link>https://carlhejiayu.github.io/post/2020-09-23-graph/</link>
+      <pubDate>Wed, 23 Sep 2020 15:05:36 -0400</pubDate>
+      <author>carlhejiayu@gmail.com (Jiayu Carl He)</author>
+      <guid>https://carlhejiayu.github.io/post/2020-09-23-graph/</guid>
+      <description>Graph is a very common algorithm problem that you encounter in the coding interviews. However, this articile is not explaining the basic of graph theory. Instead, this article mainly disucssed about when the problem should be sovled by graph theories. Of course, some problems are very obvious that you were given a tree or graph to work on. But sometimes, it&amp;rsquo;s not trival to identify whether the problem belong to graph.</description>
+    </item>
+    
+  </channel>
+</rss>
