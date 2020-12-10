@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Rectangle - He&#39;s Tech</title>
+  <meta name="description" content="Rectangle problems are classic leetcode mono-stack problem and they are one of the hardest problem. That being said, just knowing to use mono-stack to solve the problem is not enough. I am going to dicuss on how to break down those problem for easier understanding and try to teach you a genernal pattern on how to resolve this kind of problem. For sample problems, check Count Submatrices With All Ones , or Largest Rectangle in Histogram">
+  <meta name="author" content="Jiayu Carl He"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "He\x27s Tech",
+    
+    "url": "https:\/\/carlhejiayu.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/carlhejiayu.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/carlhejiayu.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/carlhejiayu.github.io\/post\/rectangle\/",
+          "name": "Rectangle"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Jiayu Carl He"
+  },
+  "headline": "Rectangle",
+  "description" : "Rectangle problems are classic leetcode mono-stack problem and they are one of the hardest problem. That being said, just knowing to use mono-stack to solve the problem is not enough. I am going to dicuss on how to break down those problem for easier understanding and try to teach you a genernal pattern on how to resolve this kind of problem. For sample problems, check Count Submatrices With All Ones , or Largest Rectangle in Histogram",
+  "inLanguage" : "en",
+  "wordCount":  295 ,
+  "datePublished" : "2020-10-07T10:37:48",
+  "dateModified" : "2020-10-07T10:37:48",
+  "image" : "https:\/\/carlhejiayu.github.io\/img\/fish.png",
+  "keywords" : [ "leetcode, stack" ],
+  "mainEntityOfPage" : "https:\/\/carlhejiayu.github.io\/post\/rectangle\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/carlhejiayu.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/carlhejiayu.github.io\/img\/fish.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Rectangle" />
+<meta property="og:description" content="Rectangle problems are classic leetcode mono-stack problem and they are one of the hardest problem. That being said, just knowing to use mono-stack to solve the problem is not enough. I am going to dicuss on how to break down those problem for easier understanding and try to teach you a genernal pattern on how to resolve this kind of problem. For sample problems, check Count Submatrices With All Ones , or Largest Rectangle in Histogram">
+<meta property="og:image" content="https://carlhejiayu.github.io/img/fish.png" />
+<meta property="og:url" content="https://carlhejiayu.github.io/post/rectangle/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="He&#39;s Tech" />
+
+  <meta name="twitter:title" content="Rectangle" />
+  <meta name="twitter:description" content="Rectangle problems are classic leetcode mono-stack problem and they are one of the hardest problem. That being said, just knowing to use mono-stack to solve the problem is not enough. I am going to …">
+  <meta name="twitter:image" content="https://carlhejiayu.github.io/img/fish.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://carlhejiayu.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.67.1" />
+  <link rel="alternate" href="https://carlhejiayu.github.io/index.xml" type="application/rss+xml" title="He&#39;s Tech"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://carlhejiayu.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://carlhejiayu.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://carlhejiayu.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://carlhejiayu.github.io">He&#39;s Tech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="He&#39;s Tech" href="https://carlhejiayu.github.io">
+            <img class="avatar-img" src="https://carlhejiayu.github.io/img/fish.png" alt="He&#39;s Tech" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Rectangle</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 7, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;295&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Jiayu Carl He
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Rectangle problems are classic leetcode mono-stack problem and they are one of the hardest problem. That being said, just knowing to use mono-stack to solve the problem is not enough. I am going to dicuss on how to break down those problem for easier understanding and try to teach you a genernal pattern on how to resolve this kind of problem.
+For sample problems, check <a href="https://leetcode.com/problems/count-submatrices-with-all-ones/">Count Submatrices With All Ones</a> , or <a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">Largest Rectangle in Histogram</a></p>
+<p>STEP1** Form a recentagle in a histogram.
+For each bar (denoted as <code>bar</code> and each bar will have its own x value, considering in the x-y cordinate) in a histogram, we can consider if <code>bar</code> can be part of the some rectangle. However, one common characteristics for all those recetanges is that <code>height(recetangle) &gt;= height(bar)</code>.  And then, we want to think iteratively for every single point in x-axis.</p>
+<p>STEP2.1** The largest recetangles that can be formed in this histogram.</p>
+<p>Check <a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">Largest Rectangle in Histogram</a> for further description. We can start to think about the maximum rectangle that can be formed for every single x1.</p>
+<p>STEP2.2** The number of the rectangles in this histogram
+Check <a href="https://leetcode.com/problems/count-submatrices-with-all-ones/">Count Submatrices With All Ones</a> for further description. We want to store the number of submatrices up to i, denoted <code>m[i]</code> and it be used for the future. For example, if height[i+1] &gt;= height[i], that means all submatrices up to i can be extended further to i+1. In addition, we can add new rectangles formed on i+1.</p>
+<p>STEP3** 2D -&gt; 1D
+A histogram is considered as a 1D problem. Sometimes, we have to consider many histograms in a 2D. Therefore, knowing the technique <code>compressing 2D to 1D</code> is extremely helpful. In this cases, we can want to compress rows of histogram and do some calculation.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://carlhejiayu.github.io/tags/leetcode/">leetcode</a>&nbsp;
+            
+              <a href="https://carlhejiayu.github.io/tags/stack/">stack</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/leetcode1031/">Leetcode.1031 Maximum Sum of Two Non-Overlapping Subarrays</a></li>
+                
+                    <li><a href="/post/2020-09-24-leetcode616/">Leetcode.616 Add Bold Tag in String</a></li>
+                
+                    <li><a href="/post/2020-09-23-graph/">Graph Problems Identification</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://carlhejiayu.github.io/post/leetcode1031/" data-toggle="tooltip" data-placement="top" title="Leetcode.1031 Maximum Sum of Two Non-Overlapping Subarrays">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:carlhejiayu@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/carlhejiayu" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/carl-jiayu-he-415a2988" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Jiayu Carl He
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://carlhejiayu.github.io">He&#39;s Tech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.67.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://carlhejiayu.github.io/js/main.js"></script>
+<script src="https://carlhejiayu.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://carlhejiayu.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

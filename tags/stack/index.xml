@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stack on He&#39;s Tech</title>
+    <link>https://carlhejiayu.github.io/tags/stack/</link>
+    <description>Recent content in stack on He&#39;s Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>carlhejiayu@gmail.com (Jiayu Carl He)</managingEditor>
+    <webMaster>carlhejiayu@gmail.com (Jiayu Carl He)</webMaster>
+    <lastBuildDate>Wed, 07 Oct 2020 10:37:48 -0400</lastBuildDate>
+    
+	<atom:link href="https://carlhejiayu.github.io/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rectangle</title>
+      <link>https://carlhejiayu.github.io/post/rectangle/</link>
+      <pubDate>Wed, 07 Oct 2020 10:37:48 -0400</pubDate>
+      <author>carlhejiayu@gmail.com (Jiayu Carl He)</author>
+      <guid>https://carlhejiayu.github.io/post/rectangle/</guid>
+      <description>Rectangle problems are classic leetcode mono-stack problem and they are one of the hardest problem. That being said, just knowing to use mono-stack to solve the problem is not enough. I am going to dicuss on how to break down those problem for easier understanding and try to teach you a genernal pattern on how to resolve this kind of problem. For sample problems, check Count Submatrices With All Ones , or Largest Rectangle in Histogram</description>
+    </item>
+    
+  </channel>
+</rss>
